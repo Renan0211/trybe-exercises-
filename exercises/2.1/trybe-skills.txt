@@ -1,1 +1,7 @@
-- JavaScript
+O que eu vou aprender da Trybe:
+
+- Unix
+- Bash
+- Git
+- HTML
+- CSS
