@@ -1,0 +1,29 @@
+h1 {
+    font-size: 65px;
+    color: orange;
+}
+.p_ou_ul {
+    background-color: rgb(0, 255, 255);
+}
+h1 {
+    font-family: sans-serif;
+    color: turquoise;
+}
+p {
+    font-weight: 600;
+}
+body {
+    color:turquoise;
+    background-color: mediumvioletred;
+    font-size: 16px;
+}
+
+p {
+    font-size: 3em;
+}
+
+ul {
+    font-style: italic;
+    line-height: 50px;
+    text-align: right;
+    text-decoration:underline rgb(120, 12, 153);
