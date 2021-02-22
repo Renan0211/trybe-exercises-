@@ -1,5 +1,11 @@
 .navigation li {
     display: inline-block;
     margin: 5%;
-    
+}
+
+.inline-image {
+    float: right;
+}
+.list li {
+    margin-bottom: 10px;
 }
