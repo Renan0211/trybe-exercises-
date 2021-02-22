@@ -2,9 +2,13 @@
     display: inline-block;
     margin: 5%;
 }
+nav {
+    text-align: center;
+}
 
 .inline-image {
     float: right;
+    margin-left: 20px;
 }
 .list li {
     margin-bottom: 10px;
