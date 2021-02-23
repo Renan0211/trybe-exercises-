@@ -1,0 +1,54 @@
+body {
+    font-family: 'Akaya Kanadaka', cursive;
+    background-color: #13abb1
+
+}
+.navigation li {
+    display: inline-block;
+    margin: 20px;
+    font-size: 30px;
+}
+nav {
+    text-align: center;
+}
+
+.inline-image {
+    
+    float: right;
+    margin-left: 20px;
+    clear: right;
+    margin-right: 50px;
+}
+.stomatopoda {
+    max-width: 350px;
+}
+.list li {
+    margin-bottom: 10px;
+    font-size: 25px;
+}
+p {
+    
+    text-align: justify;
+    font-size: 25px;
+   
+}
+section {
+    margin-top: 70px;
+    min-height: 320px;
+}
+footer {
+    font-family: monospace;
+    font-size: 20px;
+    background-color: #c29f02;
+    
+}
+
+h3 {
+    font-size: 2rem;
+}
+h2 h1 {
+    font-size: 50px;
+}
+hr {
+    border-color: #c29f02;
+}
