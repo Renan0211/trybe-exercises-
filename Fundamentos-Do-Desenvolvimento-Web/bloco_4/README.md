@@ -1,6 +1,3 @@
-# DIA 4.1 :rocket:
+# BLOCO 4 - Introdução à JavaScript e Lógica de Programação 
 
-O objetivo dos exercícios desse dia foi colocar em prática o que havia aprendido sobre JavaScript. Para isso deveria cumprir, desenvolver uma página que apresenta um dos animais mais impressionantes que existem: 
-
-Os requisitos do exercício são:
-
+Esse bloco pertence ao módulo de `fundamentos` do curso da [Trybe](https://www.betrybe.com/). 
