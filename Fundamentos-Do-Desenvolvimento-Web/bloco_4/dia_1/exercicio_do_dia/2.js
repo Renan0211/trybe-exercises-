@@ -1,9 +1,12 @@
 let a = 12;
 let b = 10;
 
-if (a>b) {
+if (a > b) {
     console.log(a);
 }
-else {
+else if (b > a){
     console.log(b);
+}
+else {
+    console.log("Os dois numeros sao iguais");
 }
