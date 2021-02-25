@@ -13,4 +13,3 @@ for(let index = 0; index < numbers.length; index ++) {
 
 console.log(greatestNumber);
 
-//caso a lista de número fosse composta apenas de números negativos esse código não funcionaria, resolver no futuro
