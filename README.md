@@ -1,4 +1,4 @@
-# Trybe
+# Trybe :green_heart:
 
 Este repositório contêm todas as atividades de aprendizagem desenvolvidas por _[Renan Antunes](https://www.linkedin.com/in/renan-antunes-561972205/)_ enquanto estuda na [Trybe](https://www.betrybe.com/) :rocket:
 
