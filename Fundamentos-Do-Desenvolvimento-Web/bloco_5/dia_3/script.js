@@ -95,6 +95,7 @@ function createButton2(string) {
 }
 
 function sextaFeira() {
+  // O uso de flag aqui foi feito depois de consulta ao stack overflow. Link : https://stackoverflow.com/questions/55147410/html-javascript-button-click-again-to-undo
   let flag = true;
   let fridayButton = document.getElementById("btn-friday");
   let fridays = document.getElementsByClassName("friday");
@@ -106,11 +107,29 @@ function sextaFeira() {
     flag = !flag;
   });
 }
+function zoomDays() {
+  let days = document.getElementsByClassName("day");
+  for (i = 0; i < days.length; i += 1) {
+    days[i].addEventListener("mouseover", function (evt) {
+      evt.target.style.fontSize = "40px";
+    });
+  }
+}
 
+function unzommDays() {
+  let days = document.getElementsByClassName("day");
+  for (i = 0; i < days.length; i += 1) {
+    days[i].addEventListener("mouseout", function (evt) {
+      evt.target.style.fontSize = "20px";
+    });
+  }
+}
 createDaysOfTheWeek();
 createDaysOfTheMonth();
 createButton("Feriados");
 createButton2("Sexta-feira");
 sextaFeira();
+zoomDays();
+unzommDays();
 
 // Escreva seu código abaixo.
