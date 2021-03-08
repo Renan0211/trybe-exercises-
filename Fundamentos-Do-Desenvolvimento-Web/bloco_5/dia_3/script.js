@@ -140,6 +140,17 @@ function createCaption(color) {
   myTasks.appendChild(caption);
 }
 
+function selectTask() {
+  let tasks = document.getElementsByClassName("task");
+  for (i = 0; i < tasks.length; i += 1) {
+    let flag = true;
+    tasks[i].addEventListener("click", function (evt) {
+      evt.target.className = flag ? "task selected" : "task";
+      flag = !flag;
+    });
+  }
+}
+
 createDaysOfTheWeek();
 createDaysOfTheMonth();
 createButton("Feriados");
@@ -149,5 +160,5 @@ zoomDays();
 unzommDays();
 createTask("Comer comida");
 createCaption("green");
-
+selectTask();
 // Escreva seu código abaixo.
