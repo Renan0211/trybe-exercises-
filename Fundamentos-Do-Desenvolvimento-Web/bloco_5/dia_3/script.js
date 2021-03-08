@@ -76,7 +76,17 @@ function createButton(string) {
   let div = document.querySelector(".buttons-container");
   div.appendChild(button);
 }
+
+function createButton2(string) {
+  let button = document.createElement("button");
+  button.id = "btn-friday";
+  button.innerText = string;
+  let div = document.querySelector(".buttons-container");
+  div.appendChild(button);
+}
+
 createDaysOfTheWeek();
 createDaysOfTheMonth();
 createButton("Feriados");
+createButton2("Sexta-feira");
 // Escreva seu código abaixo.
