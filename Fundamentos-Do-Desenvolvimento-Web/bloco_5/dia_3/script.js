@@ -131,6 +131,15 @@ function createTask(string) {
   let myTasks = document.querySelector(".my-tasks");
   myTasks.appendChild(task);
 }
+
+function createCaption(color) {
+  let caption = document.createElement("div");
+  caption.className = "task";
+  caption.style.backgroundColor = color;
+  let myTasks = document.querySelector(".my-tasks");
+  myTasks.appendChild(caption);
+}
+
 createDaysOfTheWeek();
 createDaysOfTheMonth();
 createButton("Feriados");
@@ -139,5 +148,6 @@ sextaFeira();
 zoomDays();
 unzommDays();
 createTask("Comer comida");
+createCaption("green");
 
 // Escreva seu código abaixo.
