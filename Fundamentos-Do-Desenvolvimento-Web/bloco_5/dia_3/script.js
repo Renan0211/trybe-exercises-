@@ -150,7 +150,18 @@ function selectTask() {
     });
   }
 }
-
+function changeDayBackground() {
+  let flag = true;
+  let days = document.getElementsByClassName("day");
+  for (let i = 0; i < days.length; i += 1) {
+    days[i].addEventListener("click", function (evt) {
+      evt.target.style.color = flag
+        ? document.querySelector(".selected").style.backgroundColor
+        : "rgb(119,119,119)";
+      flag = !flag;
+    });
+  }
+}
 createDaysOfTheWeek();
 createDaysOfTheMonth();
 createButton("Feriados");
@@ -161,4 +172,5 @@ unzommDays();
 createTask("Comer comida");
 createCaption("green");
 selectTask();
+changeDayBackground();
 // Escreva seu código abaixo.
