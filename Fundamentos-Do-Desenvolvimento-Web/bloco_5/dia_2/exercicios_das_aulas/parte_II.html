@@ -1,0 +1,40 @@
+<body>
+  <div id="paiDoPai">
+    <div id="pai">
+      <div id="primeiroFilho"></div>
+      <div id="elementoOndeVoceEsta">
+        <div id="primeiroFilhoDoFilho"></div>
+        <div id="segundoEUltimoFilhoDoFilho"></div>
+      </div>
+      Atenção!
+      <div id="terceiroFilho"></div>
+      <div id="quartoEUltimoFilho"></div>
+    </div>
+  </div>
+
+  <script>
+    let ondeVoceEsta = document.getElementById("elementoOndeVoceEsta");
+    ondeVoceEsta.parentElement.style.color = "blue";
+    ondeVoceEsta.firstElementChild.innerText = "Descansar";
+
+    let pai = document.getElementById("pai");
+    console.log(pai.firstElementChild);
+    console.log(ondeVoceEsta.previousElementSibling);
+    console.log(ondeVoceEsta.nextSibling);
+    console.log(ondeVoceEsta.nextElementSibling);
+    console.log(pai.lastElementChild.previousElementSibling);
+    let div = document.createElement("div");
+    let irmao = ondeVoceEsta.parentElement.appendChild(div);
+    irmao.innerHTML = "Teste";
+    let div2 = document.createElement("div");
+    let filho = ondeVoceEsta.appendChild(div2);
+    filho.innerHTML = "<strong> FOI PO </strong>";
+    console.log(filho.parentElement.nextElementSibling);
+  </script>
+</body>
+<!-- 
+Crie um irmão para elementoOndeVoceEsta .
+Crie um filho para elementoOndeVoceEsta .
+Crie um filho para primeiroFilhoDoFilho .
+A partir desse filho criado, acesse terceiroFilho .
+-->
