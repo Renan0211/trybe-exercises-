@@ -124,6 +124,13 @@ function unzommDays() {
     });
   }
 }
+
+function createTask(string) {
+  let task = document.createElement("span");
+  task.innerText = string;
+  let myTasks = document.querySelector(".my-tasks");
+  myTasks.appendChild(task);
+}
 createDaysOfTheWeek();
 createDaysOfTheMonth();
 createButton("Feriados");
@@ -131,5 +138,6 @@ createButton2("Sexta-feira");
 sextaFeira();
 zoomDays();
 unzommDays();
+createTask("Comer comida");
 
 // Escreva seu código abaixo.
