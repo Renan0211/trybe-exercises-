@@ -68,6 +68,15 @@ function createDaysOfTheMonth() {
     listOfMonthDays.appendChild(newDay);
   }
 }
+
+function createButton(string) {
+  let button = document.createElement("button");
+  button.id = "btn-holiday";
+  button.innerText = string;
+  let div = document.querySelector(".buttons-container");
+  div.appendChild(button);
+}
 createDaysOfTheWeek();
 createDaysOfTheMonth();
+createButton("Feriados");
 // Escreva seu código abaixo.
