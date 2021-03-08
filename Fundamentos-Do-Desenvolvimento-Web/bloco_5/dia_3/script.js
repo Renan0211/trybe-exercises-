@@ -162,6 +162,33 @@ function changeDayBackground() {
     });
   }
 }
+
+function createCompromise(evt) {
+  let input = document.getElementById("task-input");
+  let compromissos = document.getElementById("compromise-list");
+  let newCompromise = document.createElement("div");
+
+  if (evt.keyCode === 13) {
+    newCompromise.innerText = input.value;
+    compromissos.appendChild(newCompromise);
+    input.value = "";
+  } else if (evt.type === "click") {
+    if (input.value.length === 0) {
+      alert("Campo Vazio!");
+    } else {
+      newCompromise.innerText = input.value;
+      compromissos.appendChild(newCompromise);
+      input.value = "";
+    }
+  }
+}
+
+function addCompromise() {
+  let addBtn = document.getElementById("btn-add");
+  addBtn.addEventListener("click", createCompromise);
+  let typeCamp = document.querySelector("input");
+  typeCamp.addEventListener("keydown", createCompromise);
+}
 createDaysOfTheWeek();
 createDaysOfTheMonth();
 createButton("Feriados");
@@ -173,4 +200,5 @@ createTask("Comer comida");
 createCaption("green");
 selectTask();
 changeDayBackground();
+addCompromise();
 // Escreva seu código abaixo.
