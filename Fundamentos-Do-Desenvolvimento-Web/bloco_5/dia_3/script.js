@@ -57,14 +57,23 @@ function createDaysOfTheMonth() {
   let listOfMonthDays = document.getElementById("days");
   for (i = 0; i < dezDaysList.length; i += 1) {
     let newDay = document.createElement("li");
+    newDay.innerText = dezDaysList[i];
     newDay.className = "day";
-    if (dezDaysList[i] === 24 || 25 || 31) {
-      newDay.className = " holiday";
+    if (
+      newDay.innerText == 24 ||
+      newDay.innerText == 25 ||
+      newDay.innerText == 31
+    ) {
+      newDay.className += " holiday";
     }
-    if (dezDaysList[i] === 4 || 11 || 18 || 25) {
+    if (
+      newDay.innerText == 4 ||
+      newDay.innerText == 11 ||
+      newDay.innerText == 18 ||
+      newDay.innerText == 25
+    ) {
       newDay.className += " friday";
     }
-    newDay.innerText = dezDaysList[i];
     listOfMonthDays.appendChild(newDay);
   }
 }
@@ -85,8 +94,23 @@ function createButton2(string) {
   div.appendChild(button);
 }
 
+function sextaFeira() {
+  let flag = true;
+  let fridayButton = document.getElementById("btn-friday");
+  let fridays = document.getElementsByClassName("friday");
+  let fridaysDays = ["4", "11", "18", "25"];
+  fridayButton.addEventListener("click", function () {
+    for (i2 = 0; i2 < fridays.length; i2 += 1) {
+      fridays[i2].innerText = flag ? "Sextou!!!" : `${fridaysDays[i2]}`;
+    }
+    flag = !flag;
+  });
+}
+
 createDaysOfTheWeek();
 createDaysOfTheMonth();
 createButton("Feriados");
 createButton2("Sexta-feira");
+sextaFeira();
+
 // Escreva seu código abaixo.
