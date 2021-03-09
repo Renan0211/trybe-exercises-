@@ -26,7 +26,12 @@ function changeLineHeight() {
   document.body.style.lineHeight = localStorage.getItem('lineHeight')
 }
 
+function changeFontFamily() {
+  document.body.style.fontFamily = localStorage.getItem('fontFamily')
+}
+
 changeBackgroundColor()
 changeFontColor()
 changeFontSize()
 changeLineHeight()
+changeFontFamily()
