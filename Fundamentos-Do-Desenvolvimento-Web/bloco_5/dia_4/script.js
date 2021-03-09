@@ -18,5 +18,10 @@ function changeFontColor () {
   document.body.style.color = localStorage.getItem("fontColor")
 }
 
+function changeFontSize() {
+  document.body.style.fontSize = localStorage.getItem('fontSize')
+}
+
 changeBackgroundColor()
 changeFontColor()
+changeFontSize()
