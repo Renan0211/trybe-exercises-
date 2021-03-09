@@ -22,6 +22,11 @@ function changeFontSize() {
   document.body.style.fontSize = localStorage.getItem('fontSize')
 }
 
+function changeLineHeight() {
+  document.body.style.lineHeight = localStorage.getItem('lineHeight')
+}
+
 changeBackgroundColor()
 changeFontColor()
 changeFontSize()
+changeLineHeight()
