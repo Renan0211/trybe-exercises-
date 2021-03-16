@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Resume Form</title>
+  <link rel="stylesheet" type="text/css" href="/styles.css">
+</head>
+<body>
+  <h1>Formulário de Currículo</h1>
+  <form action="">
+    <fieldset>
+      <label for="name">Nome</label>
+      <br>
+      <input type="text" maxlength="40" required placeholder="Digite aqui o seu nome" id="name">
+      <br>
+      <label for="e-mail">E-mail</label>
+      <br>
+      <input type="text" maxlength="50" required id="e-mail" placeholder="Digite qui o seu e-mail" required>
+      <br>
+      <label for="cpf">CPF</label>
+      <br>
+      <input type="text" maxlength="11" required id="cpf" placeholder="Digite qui o seu CPF" required>
+      <br>
+      <label for="adress">Endereço</label>
+      <br>
+      <input type="text" maxlength="200" required id="adress" placeholder="Digite qui o seu Endereço" required>
+      <br>
+      <label for="city">Cidade</label>
+      <br>
+      <input type="text" maxlength="28" required id="city" placeholder="Digite qui a sua cidade" required>
+      <br>
+      <label for="casa">Casa</label>
+      <input type="radio" name="casa-apartamento" id="casa" value="casa" checked>
+      <label for="ape">Apartamento</label>
+      <input type="radio" name="casa-apartamento" value="ape" id="ape">
+    </fieldset>
+    <fieldset>
+      <label for="resume">Resumo do Currículo</label>
+      <br>
+      <textarea name="resume" id="resume" cols="60" rows="10" maxlength="1000" required placeholder="Coloque aqui um resumo do seu currículo"></textarea>
+      <br>
+      <label for="role">Cargo Atual</label>
+      <br>
+      <input type="text" name="role" id="role" maxlength="40" required placeholder="Digite aqui o seu cargo atual">
+      <br>
+      <label for="role-description">Descrição do Cargo</label>
+      <br>
+      <input type="text" name="role-description" id="role-description" maxlength="500" required placeholder="Descreva seu cargo atual">
+      <br>
+      <label for="start-date">Data de ínicio</label>
+      <br>
+      <input type="text" name="start-date" id="start-date" required placeholder="Formato dd/mm/aaaa">
+      <br>
+      <button type="submit" id="submit">Enviar</button>
+    </fieldset>
+  </form>
+  <script src="/script.js"></script>
+</body>
+</html>
