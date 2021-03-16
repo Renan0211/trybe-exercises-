@@ -1,0 +1,9 @@
+fieldset {
+  margin: 15px;
+}
+fieldset [type = 'text']  {
+  margin: 5px;
+}
+label {
+  margin: 5px
+}
