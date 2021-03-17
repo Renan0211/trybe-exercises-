@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Resume Form</title>
+  <link rel="stylesheet" type="text/css" href="bootstrap-4.6.0-dist/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <script src="/jquery-3.6.0.min.js"></script>
+  <script src="/bootstrap-4.6.0-dist/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="dist/css/DatePickerX.min.css">
+  <script src="dist/js/DatePickerX.min.js"></script>
+</head>
+<body>
+  <h1>Formulário de Currículo</h1>
+  <form action="">
+    <div class="form-group">
+      <label for="name">Nome</label>
+      <input type="text" maxlength="40" required placeholder="Digite aqui o seu nome" id="name" class="form-control">
+    </div>
+    <div class="form-group">
+      <label for="e-mail">E-mail</label>
+      <input type="email" maxlength="50" required id="e-mail" placeholder="Digite aqui o seu e-mail" required class="form-control">
+    </div>
+    <div class="form-group">
+      <label for="cpf">CPF</label>
+      <input type="text" maxlength="11" required id="cpf" placeholder="Digite aqui o seu CPF" required class="form-control">
+    </div>
+    <div class="form-group">
+      <label for="adress">Endereço</label>
+      <input type="text" maxlength="200" required id="adress" placeholder="Digite aqui o seu Endereço" required class="form-control">
+    </div>
+    <div class="form-group">
+      <label for="city">Cidade</label>
+      <input type="text" maxlength="28" required id="city" placeholder="Digite aqui a sua cidade" required class="form-control">
+    </div>
+    <div class="form-check form-check-inline">
+      <input type="radio" name="casa-apartamento" id="casa" value="casa" checked class="form-check-input">
+      <label for="casa" class="form-check-label">Casa</label>
+    </div>
+    <div class="form-check form-check-inline">
+      <input type="radio" name="casa-apartamento" value="ape" id="ape" class="form-check-input">
+      <label for="ape" class="form-check-label">Apartamento</label>
+    </div>
+    <div class="form-group">
+      <label for="resume">Resumo do Currículo</label>
+      <textarea name="resume" id="resume" cols="60" rows="10" maxlength="1000" required placeholder="Coloque aqui um resumo do seu currículo" class="form-control"></textarea>
+    </div>
+    <div class="form-group">
+      <label for="role">Cargo Atual</label>
+      <input type="text" name="role" id="role" maxlength="40" required placeholder="Digite aqui o seu cargo atual" class="form-control">
+    </div>
+    <div class="form-group">
+      <label for="role-description">Descrição do Cargo</label>
+      <input type="text" name="role-description" id="role-description" maxlength="500" required placeholder="Descreva seu cargo atual" class="form-control">
+    </div>
+    <div class="form-group">
+      <label for="start-date">Data de ínicio</label>
+      <input type="date" name="start-date" id="start-date" required placeholder="Formato dd/mm/aaaa" class="form-control">
+    </div>  
+    <div class="form-group">
+      <button type="submit" id="submit" class="btn btn-outline-success">Enviar</button>
+      <button class="btn btn-outline-danger">Cancelar</button>
+    </div>
+  </form>
+  <script src="/script.js"></script>
+  <script src="./path/to/just-validate.min.js"></script>
+</body>
+</html>
