@@ -28,4 +28,30 @@ const objSize = obj => Object.keys(obj).length;
 
 const listValues = obj => Object.values(obj);
 
-Object.assign(allLessons, lesson1, lesson2, lesson3);
+const allLessons = Object.assign({}, {lesson1, lesson2, lesson3})
+
+// console.log(allLessons)
+
+function sumOfStudents (obj) {
+  const allValues = listValues(obj);
+  let studentCounter = 0;
+  for (i in allValues) {
+    studentCounter += allValues[i].numeroEstudantes;
+  }
+  return studentCounter;
+}
+
+const getValueByNumber = (obj, num) => Object.values(obj)[num];
+
+const verifyPair = (obj, key, value) => {
+   const allEntries = Object.entries(obj);
+   let check = false;
+   for(i in allEntries) {
+     if (allEntries[i][0] === key && allEntries[i][1] === value) check = true;
+   }
+   return check;
+};
+
+console.log(verifyPair(lesson3, 'turno', 'noite'));
+
+console.log(verifyPair(lesson3, 'materia', 'Maria Clara'));
