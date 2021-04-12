@@ -15,11 +15,11 @@ const handleError = (errorReason) => console.log(`Error getting temperature: ${e
 
 // definição da função sendMarsTemperature...
 
-const sendMarsTemperature = (temperatureFn, errorFn) => {
+const sendMarsTemperature = (actionFn, errorFn) => {
   const temperature = getMarsTemperature();
   const busyRobot = 'Robot is busy';
   const random = Math.random() > 0.4;
-  if(random) temperatureFn(temperature);
+  if(random) actionFn(temperature);
   else errorFn(busyRobot);
 }
 // imprime "It is currently 47ºF at Mars", por exemplo, ou "Error getting temperature: Robot is busy"

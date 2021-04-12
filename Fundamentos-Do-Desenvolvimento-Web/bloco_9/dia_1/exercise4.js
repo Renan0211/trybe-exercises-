@@ -10,7 +10,7 @@ const getMarsTemperature = () => {
 // crie a função sendMarsTemperature abaixo
 
 
-  function sendMarsTemperature () {
+  const sendMarsTemperature = () => {
     const temperature = getMarsTemperature();
     console.log(`Mars temperature is: ${temperature} degree Celsius`)
     return temperature;
