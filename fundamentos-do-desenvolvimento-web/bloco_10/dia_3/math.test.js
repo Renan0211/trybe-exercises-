@@ -1,7 +1,4 @@
 
-// const { test, jest, expect } = require('@jest/globals');
-// const { exp } = require('mathjs');
-// const { describe } = require('yargs');
 const math = require('./math');
 
 describe('testa a função subtrair', () => {
