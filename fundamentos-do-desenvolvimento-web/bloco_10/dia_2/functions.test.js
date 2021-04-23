@@ -1,5 +1,9 @@
-const {uppercase} = require('./functions');
-
-describe('testa a callback da função uppercase', () => {
-  expect()
+const uppercase = (str, callback) => {
+  callback(str.toUpperCase());
+}
+test('se uppercase teste é igual à TESTE', (done) => {
+  uppercase('teste', (str) => {
+    expect(str).toBe('TESTE')
+    done();
+  })
 })
