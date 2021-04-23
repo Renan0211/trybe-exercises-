@@ -1,5 +1,6 @@
 
-const {uppercase, findUserById, getUserName} = require('./functions')
+const {uppercase, findUserById, getUserName, getRepos, fetch} = require('./functions')
+
 
 test('se uppercase teste é igual à TESTE', (done) => {
   uppercase('teste', (str) => {
@@ -41,6 +42,14 @@ describe('when the users id does not exist', () => {
     } catch (error) {
       expect(error).toEqual({ error: 'User with 0 not found.'})
     }
+  })
+})
+
+describe('when getRepos is given an existing url', () => {
+  it('should return an arr with the repository names', async () => {
+    const tryberRep = await getRepos('https://api.github.com/orgs/tryber/repos');
+    const existingRep = ['sd-01-week4-5-project-todo-list', 'sd-01-week4-5-project-meme-generator']
+    expect(tryberRep).toEqual(expect.arrayContaining(existingRep))
   })
 })
 
