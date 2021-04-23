@@ -1,5 +1,5 @@
 
-const {uppercase, findUserById, getUserName, getRepos, fetch} = require('./functions')
+const {uppercase, findUserById, getUserName, getRepos, fetch, Animals, findAnimalByName, getAnimal, findAnimalByAge} = require('./functions')
 
 
 test('se uppercase teste é igual à TESTE', (done) => {
@@ -53,3 +53,33 @@ describe('when getRepos is given an existing url', () => {
   })
 })
 
+describe('Testando promise - findAnimalByName', () => {
+  describe('Quando existe o animal com o nome procurado', () => {
+    test('Retorne o objeto do animal', () => {
+      expect.assertions(1);
+      return getAnimal('Dorminhoco').then(animal => {
+        expect(animal).toEqual({ name: 'Dorminhoco', age: 1, type: 'Dog' });
+      });
+    });
+  });
+
+  describe('Quando não existe o animal com o nome procurado', () => {
+    test('Retorna um erro', () => {
+      expect.assertions(1);
+      return getAnimal('Bob').catch(error =>
+        expect(error).toEqual('Nenhum animal com esse nome!')
+      );
+    });
+  });
+});
+
+describe('Testando função getAnimalByAge', () => {
+  test('se retorna um array de objetos quando um animal ou mais possuem a idade especificada', () => {
+    const expected = [{ name: 'Soneca', age: 2, type: 'Dog' }];
+    const actual = findAnimalByAge(2);
+    expect(actual).toEqual(expected);
+  })
+  test('se retorna uma mensagem de erro quando nenhum animal possue a idade especificada', () => {
+    expect(findAnimalByAge(7)).toBe('Nenhum animal com essa idade!')
+  })
+})
