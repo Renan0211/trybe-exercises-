@@ -1,6 +1,6 @@
 # DIA 20.3 :rocket:
 
-O objetivo dos exercícios desse dia foi colocar em prática o que havia aprendido sobre queries em SQL.
+O objetivo dos exercícios desse dia foi colocar em prática o que havia aprendido sobre queries mais avançadas em SQL.
 
 Os requisitos do exercício são:
 
