@@ -1,6 +1,6 @@
 # DIA 20.4 :rocket:
 
-O objetivo dos exercícios desse dia foi colocar em prática o que havia aprendido sobre queries em SQL.
+O objetivo dos exercícios desse dia foi colocar em prática o que havia aprendido sobre inserção, atualização e deleção de dados de tabelas SQL, nos foi dado um banco de dados Pixar com algumas tabelas dentro.
 
 Os requisitos do exercício são:
 
@@ -126,3 +126,53 @@ WHERE
     
 ```
   
+## Bônus
+Para realizar os exercícios 8 a 10, faça os exercícios anteriores (1 a 7) e utilize o banco de dados Pixar .
+
+8. Altere a classificação da tabela BoxOffice para 9.0 de todos os filmes que lucraram mais de 400 milhões no mercado interno.
+    * Minha resolução: 
+  ```SQL
+SET SQL_SAFE_UPDATES = 0;
+
+UPDATE BoxOffice 
+SET 
+    rating = 9
+WHERE
+    domestic_sales > 400000000;
+
+SELECT * FROM BoxOffice ORDER BY domestic_sales;
+    
+```
+9. Altere a classificação da tabela BoxOffice para 6.0 de todos os filmes que lucraram menos de 300 milhões no mercado internacional e mais de 200 milhões no mercado interno.
+    * Minha resolução: 
+  ```SQL
+SET SQL_SAFE_UPDATES = 0;
+
+UPDATE BoxOffice 
+SET 
+    rating = 6
+WHERE
+    international_sales < 300000000 AND domestic_sales > 200000000;
+    
+```
+10. Exclua da tabela Movies todos os filmes com menos de 100 minutos de duração.
+    * Minha resolução: 
+  ```SQL
+SET SQL_SAFE_UPDATES = 0;
+
+SELECT 
+    id, title
+FROM
+    Movies
+WHERE
+    length_minutes < 100;
+    
+DELETE FROM BoxOffice 
+WHERE
+    movie_id IN (1 , 6, 7, 8);
+
+DELETE FROM Movies 
+WHERE
+    length_minutes < 100;
+    
+```
