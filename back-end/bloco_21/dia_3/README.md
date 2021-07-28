@@ -1,7 +1,5 @@
 # Dia 21.3 :rocket:
 
-Created: July 27, 2021 12:44 PM
-
 O objetivo dos exercícios desse dia foi colocar em prática o que havia aprendido sobre Stored Routines, Stored Functions e Triggers em SQL e como automatizar alguns processos usando essas ferramentas
 
 Os requisitos do exercício são:
